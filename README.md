@@ -3,7 +3,7 @@
  - [Scaler Types](## 1. Scaler Types)
  - [Array Types](## 2. Array Types)
  - [Object Types]()
-## 1. Scaler Types
+# 1. Scaler Types
 
 
 
