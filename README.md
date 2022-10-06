@@ -1,7 +1,7 @@
 ## Table of Contents
 
- - [Scaler Types](## 1. Scaler Types)
- - [Array Types](## 2. Array Types)
+ - [Scaler Types]('## 1. Scaler Types')
+ - [Array Types]()
  - [Object Types]()
 ## 1. Scaler Types
 
