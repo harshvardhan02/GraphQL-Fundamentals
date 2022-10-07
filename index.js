@@ -1,22 +1,23 @@
-const { ApolloServer, gql } = require("apollo-server");
+const { ApolloServer } = require("apollo-server");
+const { typeDefs } = require("./schema");
 
-const typeDefs = gql`
-  type Query {
-    hello: [String!]! # it says that we need array of string (valiation) and whole array instead of null (valiation)
-  }
-`
+const { Query } = require("./resolvers/Query");
+const { Product } = require("./resolvers/Product");
+const { Category } = require("./resolvers/Category");
 
-const resolvers = {
-  Query: {
-    hello: () => {
-      return ["Hello", "World", "GraphQL"]
-    }
-  }
-}
+const { categories, products } = require("./db");
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers: {
+    Query,
+    Product,
+    Category
+  },
+  context: {
+    categories,
+    products
+  }
 });
 
 server.listen().then(({ url }) => {
