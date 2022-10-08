@@ -11,6 +11,7 @@ exports.Product = {
   }
 }
 
+
 // we can also destrcuture like below approach
 
 // exports.Product = {
